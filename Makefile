@@ -17,7 +17,7 @@ powerline_font:
 
 update:
 	@git submodule foreach git checkout master
-	@cd vim/bundle/vim-powerline && git checkout develop
+	@cd vim/bundle/powerline && git checkout develop
 	@git submodule foreach git pull
 	@make -s pathogen
 
