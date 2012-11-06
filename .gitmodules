@@ -31,3 +31,6 @@
 [submodule "vim/bundle/nerdtree-execute"]
 	path = vim/bundle/nerdtree-execute
 	url = https://github.com/ivalkeen/nerdtree-execute
+[submodule "vim/bundle/vim-markdown"]
+	path = vim/bundle/vim-markdown
+	url = https://github.com/tpope/vim-markdown.git
