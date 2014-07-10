@@ -108,6 +108,9 @@ nmap gy ggVGy
 nnoremap j gj
 nnoremap k gk
 
+" swap characters
+nnoremap gs xph
+
 " auto complete {} indent and position the cursor in the middle line
 inoremap {<CR>  {<CR>}<Esc>O
 inoremap (<CR>  (<CR>)<Esc>O
@@ -210,6 +213,9 @@ au FileType python set noexpandtab
 
 " JavaScript
 au BufRead,BufNewFile *.json set ft=javascript
+
+" Groovy
+au BufRead,BufNewFile *.ruleset set ft=groovy
 
 "" STATUS LINE
 set laststatus=2 " always hide the last status
