@@ -38,9 +38,9 @@ set nobackup                        " prevent backups of files, since using vcs
 set nowritebackup
 set noswapfile
 
-set shiftwidth=3                    " set tab width
-set softtabstop=3
-set tabstop=3
+set shiftwidth=2                    " set tab width
+set softtabstop=2
+set tabstop=2
 
 set smarttab
 set expandtab                       " use spaces, not tabs
@@ -56,7 +56,7 @@ set noeb vb t_vb=                   " disable audio and visual bells
 
 set t_Co=256                        " use 256 colors
 set background=dark
-colorscheme shady                   " terminal theme
+colorscheme jellybeans                   " terminal theme
 if exists('+colorcolumn')
    set colorcolumn=115              " show a right margin column
 endif
@@ -200,7 +200,8 @@ let g:Powerline_symbols = 'fancy'
 set grepprg=ack
 nnoremap <leader>a :Ack<space>
 let g:ackhighlight=1
-let g:ackprg="ack -H --type-set jade=.jade --type-set stylus=.styl --type-set coffee=.coffee --nocolor --nogroup --column --ignore-dir=node_modules -G '^((?!min\.).)*$'"
+" let g:ackprg="ack -H --type-set jade=.jade --type-set stylus=.styl --type-set coffee=.coffee --nocolor --nogroup --column --ignore-dir=node_modules -G '^((?!min\.).)*$'"
+let g:ackprg="ag --nogroup --nocolor --column"
 
 " CoffeeScript
 map <leader>cc :CoffeeCompile<cr>
