@@ -1,0 +1,366 @@
+[
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+      {
+        "doc" : "The URL of the backing server. Defaults to 'http:\/\/localhost:9908'",
+        "stripped_doc" : [
+          "The URL of the backing server. Defaults to 'http:\/\/localhost:9908'"
+        ],
+        "parameters" : [
+
+        ],
+        "def" : "EliteExtra.server_url",
+        "notes" : [
+
+        ],
+        "signature" : "EliteExtra.server_url",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "server_url",
+        "desc" : "The URL of the backing server. Defaults to 'http:\/\/localhost:9908'"
+      },
+      {
+        "doc" : "The home directory of the backing server. Must be set for this spoon to manage your server, otherwise you will be in charge of making sure the server is running.",
+        "stripped_doc" : [
+          "The home directory of the backing server. Must be set for this spoon to manage your server, otherwise you will be in charge of making sure the server is running."
+        ],
+        "parameters" : [
+
+        ],
+        "def" : "EliteExtra.server_home",
+        "notes" : [
+
+        ],
+        "signature" : "EliteExtra.server_home",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "server_home",
+        "desc" : "The home directory of the backing server. Must be set for this spoon to manage your server, otherwise you will be in charge of making sure the server is running."
+      },
+      {
+        "doc" : "The home directory of the gradle executable. Defaults to '$HOME\/.sdkman\/candidates\/gradle\/current\/bin\/gradle'",
+        "stripped_doc" : [
+          "The home directory of the gradle executable. Defaults to '$HOME\/.sdkman\/candidates\/gradle\/current\/bin\/gradle'"
+        ],
+        "parameters" : [
+
+        ],
+        "def" : "EliteExtra.gradle_home",
+        "notes" : [
+
+        ],
+        "signature" : "EliteExtra.gradle_home",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "gradle_home",
+        "desc" : "The home directory of the gradle executable. Defaults to '$HOME\/.sdkman\/candidates\/gradle\/current\/bin\/gradle'"
+      },
+      {
+        "doc" : "If this is true, query windows will be opened in DBeaver. Otherwise, PGAdmin3 will be used.",
+        "stripped_doc" : [
+          "If this is true, query windows will be opened in DBeaver. Otherwise, PGAdmin3 will be used."
+        ],
+        "parameters" : [
+
+        ],
+        "def" : "EliteExtra.use_dbeaver",
+        "notes" : [
+
+        ],
+        "signature" : "EliteExtra.use_dbeaver",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "use_dbeaver",
+        "desc" : "If this is true, query windows will be opened in DBeaver. Otherwise, PGAdmin3 will be used."
+      },
+      {
+        "doc" : "If this is true and \"use_dbeaver\" is true, query windows will use named connections generated as \"dbeaver-data-sources-dbs.xml\" by the connection generator script. By default, temp connections will be used.",
+        "stripped_doc" : [
+          "If this is true and \"use_dbeaver\" is true, query windows will use named connections generated as \"dbeaver-data-sources-dbs.xml\" by the connection generator script. By default, temp connections will be used."
+        ],
+        "parameters" : [
+
+        ],
+        "def" : "EliteExtra.use_named_connections",
+        "notes" : [
+
+        ],
+        "signature" : "EliteExtra.use_named_connections",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "use_named_connections",
+        "desc" : "If this is true and \"use_dbeaver\" is true, query windows will use named connections generated as \"dbeaver-data-sources-dbs.xml\" by the connection generator script. By default, temp connections will be used."
+      }
+    ],
+    "stripped_doc" : [
+
+    ],
+    "type" : "Module",
+    "Deprecated" : [
+
+    ],
+    "desc" : "Adds a chooser to query for and interact with Extra sites. Relies on a backing server to cache and serve the data.",
+    "Constructor" : [
+
+    ],
+    "doc" : "Adds a chooser to query for and interact with Extra sites. Relies on a backing server to cache and serve the data.",
+    "Method" : [
+      {
+        "doc" : "Binds hotkeys for EliteExtra\n\nParameters:\n * mapping - A table containing hotkey modifier\/key details for the following items:\n  * search - This will open the site-search chooser",
+        "stripped_doc" : [
+          "Binds hotkeys for EliteExtra",
+          ""
+        ],
+        "parameters" : [
+          " * mapping - A table containing hotkey modifier\/key details for the following items:",
+          "  * search - This will open the site-search chooser"
+        ],
+        "def" : "EliteExtra:bindHotkeys(mapping)",
+        "notes" : [
+
+        ],
+        "signature" : "EliteExtra:bindHotkeys(mapping)",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "bindHotkeys",
+        "desc" : "Binds hotkeys for EliteExtra"
+      },
+      {
+        "doc" : "Start EliteExtra site-search chooser\n\nParameters:\n * None",
+        "stripped_doc" : [
+          "Start EliteExtra site-search chooser",
+          ""
+        ],
+        "parameters" : [
+          " * None"
+        ],
+        "def" : "EliteExtra:start()",
+        "notes" : [
+
+        ],
+        "signature" : "EliteExtra:start()",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "start",
+        "desc" : "Start EliteExtra site-search chooser"
+      },
+      {
+        "doc" : "Stop EliteExtra site-search chooser\n\nParameters:\n * None",
+        "stripped_doc" : [
+          "Stop EliteExtra site-search chooser",
+          ""
+        ],
+        "parameters" : [
+          " * None"
+        ],
+        "def" : "EliteExtra:stop()",
+        "notes" : [
+
+        ],
+        "signature" : "EliteExtra:stop()",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "stop",
+        "desc" : "Stop EliteExtra site-search chooser"
+      }
+    ],
+    "Field" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "The home directory of the gradle executable. Defaults to '$HOME\/.sdkman\/candidates\/gradle\/current\/bin\/gradle'",
+        "stripped_doc" : [
+          "The home directory of the gradle executable. Defaults to '$HOME\/.sdkman\/candidates\/gradle\/current\/bin\/gradle'"
+        ],
+        "parameters" : [
+
+        ],
+        "def" : "EliteExtra.gradle_home",
+        "notes" : [
+
+        ],
+        "signature" : "EliteExtra.gradle_home",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "gradle_home",
+        "desc" : "The home directory of the gradle executable. Defaults to '$HOME\/.sdkman\/candidates\/gradle\/current\/bin\/gradle'"
+      },
+      {
+        "doc" : "The home directory of the backing server. Must be set for this spoon to manage your server, otherwise you will be in charge of making sure the server is running.",
+        "stripped_doc" : [
+          "The home directory of the backing server. Must be set for this spoon to manage your server, otherwise you will be in charge of making sure the server is running."
+        ],
+        "parameters" : [
+
+        ],
+        "def" : "EliteExtra.server_home",
+        "notes" : [
+
+        ],
+        "signature" : "EliteExtra.server_home",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "server_home",
+        "desc" : "The home directory of the backing server. Must be set for this spoon to manage your server, otherwise you will be in charge of making sure the server is running."
+      },
+      {
+        "doc" : "The URL of the backing server. Defaults to 'http:\/\/localhost:9908'",
+        "stripped_doc" : [
+          "The URL of the backing server. Defaults to 'http:\/\/localhost:9908'"
+        ],
+        "parameters" : [
+
+        ],
+        "def" : "EliteExtra.server_url",
+        "notes" : [
+
+        ],
+        "signature" : "EliteExtra.server_url",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "server_url",
+        "desc" : "The URL of the backing server. Defaults to 'http:\/\/localhost:9908'"
+      },
+      {
+        "doc" : "If this is true, query windows will be opened in DBeaver. Otherwise, PGAdmin3 will be used.",
+        "stripped_doc" : [
+          "If this is true, query windows will be opened in DBeaver. Otherwise, PGAdmin3 will be used."
+        ],
+        "parameters" : [
+
+        ],
+        "def" : "EliteExtra.use_dbeaver",
+        "notes" : [
+
+        ],
+        "signature" : "EliteExtra.use_dbeaver",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "use_dbeaver",
+        "desc" : "If this is true, query windows will be opened in DBeaver. Otherwise, PGAdmin3 will be used."
+      },
+      {
+        "doc" : "If this is true and \"use_dbeaver\" is true, query windows will use named connections generated as \"dbeaver-data-sources-dbs.xml\" by the connection generator script. By default, temp connections will be used.",
+        "stripped_doc" : [
+          "If this is true and \"use_dbeaver\" is true, query windows will use named connections generated as \"dbeaver-data-sources-dbs.xml\" by the connection generator script. By default, temp connections will be used."
+        ],
+        "parameters" : [
+
+        ],
+        "def" : "EliteExtra.use_named_connections",
+        "notes" : [
+
+        ],
+        "signature" : "EliteExtra.use_named_connections",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "use_named_connections",
+        "desc" : "If this is true and \"use_dbeaver\" is true, query windows will use named connections generated as \"dbeaver-data-sources-dbs.xml\" by the connection generator script. By default, temp connections will be used."
+      },
+      {
+        "doc" : "Binds hotkeys for EliteExtra\n\nParameters:\n * mapping - A table containing hotkey modifier\/key details for the following items:\n  * search - This will open the site-search chooser",
+        "stripped_doc" : [
+          "Binds hotkeys for EliteExtra",
+          ""
+        ],
+        "parameters" : [
+          " * mapping - A table containing hotkey modifier\/key details for the following items:",
+          "  * search - This will open the site-search chooser"
+        ],
+        "def" : "EliteExtra:bindHotkeys(mapping)",
+        "notes" : [
+
+        ],
+        "signature" : "EliteExtra:bindHotkeys(mapping)",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "bindHotkeys",
+        "desc" : "Binds hotkeys for EliteExtra"
+      },
+      {
+        "doc" : "Start EliteExtra site-search chooser\n\nParameters:\n * None",
+        "stripped_doc" : [
+          "Start EliteExtra site-search chooser",
+          ""
+        ],
+        "parameters" : [
+          " * None"
+        ],
+        "def" : "EliteExtra:start()",
+        "notes" : [
+
+        ],
+        "signature" : "EliteExtra:start()",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "start",
+        "desc" : "Start EliteExtra site-search chooser"
+      },
+      {
+        "doc" : "Stop EliteExtra site-search chooser\n\nParameters:\n * None",
+        "stripped_doc" : [
+          "Stop EliteExtra site-search chooser",
+          ""
+        ],
+        "parameters" : [
+          " * None"
+        ],
+        "def" : "EliteExtra:stop()",
+        "notes" : [
+
+        ],
+        "signature" : "EliteExtra:stop()",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "stop",
+        "desc" : "Stop EliteExtra site-search chooser"
+      }
+    ],
+    "Command" : [
+
+    ],
+    "name" : "EliteExtra"
+  }
+]

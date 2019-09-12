@@ -1,8 +1,22 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'nanotech/jellybeans.vim'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'SirVer/ultisnips'
+Plug 'vim-scripts/tComment'
+Plug 'mileszs/ack.vim'
+Plug 'saltstack/salt-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'wavded/vim-stylus'
+Plug 'artur-shaik/vim-javacomplete2'
+Plug 'sheerun/vim-polyglot'
+
+call plug#end()
+
 set nocompatible                    " full vim
 syntax enable                       " enable syntax highlighting
 set encoding=utf8                   " utf8 default encoding
 
-call pathogen#infect()              " load pathogen
 filetype plugin indent on
 
 noremap , \
@@ -89,7 +103,7 @@ set foldlevel=99
 nmap <leader>w :up<cr>
 
 " fast escaping
-imap jj <ESC>
+imap <C-J> <ESC>
 
 " prevent accidental striking of F1 key
 map <F1> <ESC>
@@ -127,6 +141,9 @@ map <leader>cd :cd %:p:h<cr>
 
 " open file explorer
 map <leader>n :NERDTreeToggle<cr>
+
+" quick split
+map <leader>s :split<cr>
 
 " swap implementations of ` and ' jump to prefer row and column jumping
 nnoremap ' `
@@ -197,11 +214,10 @@ map <leader>b :CtrlPBuffer<cr>
 let g:Powerline_symbols = 'fancy'
 
 " Ack
-set grepprg=ack
+set grepprg=rg
 nnoremap <leader>a :Ack<space>
 let g:ackhighlight=1
-" let g:ackprg="ack -H --type-set jade=.jade --type-set stylus=.styl --type-set coffee=.coffee --nocolor --nogroup --column --ignore-dir=node_modules -G '^((?!min\.).)*$'"
-let g:ackprg="ag --nogroup --nocolor --column"
+let g:ackprg="rg --no-heading --color never --column"
 
 " CoffeeScript
 map <leader>cc :CoffeeCompile<cr>
@@ -217,6 +233,29 @@ au BufRead,BufNewFile *.json set ft=javascript
 
 " Groovy
 au BufRead,BufNewFile *.ruleset set ft=groovy
+au BufRead,BufNewFile *.gradle set ft=groovy
+au BufRead,BufNewFile *.profile set ft=groovy
+au BufRead,BufNewFile Jenkinsfile set ft=groovy
 
 "" STATUS LINE
 set laststatus=2 " always hide the last status
+
+function! HighlightRepeats() range
+  let lineCounts = {}
+  let lineNum = a:firstline
+  while lineNum <= a:lastline
+    let lineText = getline(lineNum)
+    if lineText != ""
+      let lineCounts[lineText] = (has_key(lineCounts, lineText) ? lineCounts[lineText] : 0) + 1
+    endif
+    let lineNum = lineNum + 1
+  endwhile
+  exe 'syn clear Repeat'
+  for lineText in keys(lineCounts)
+    if lineCounts[lineText] >= 2
+      exe 'syn match Repeat "^' . escape(lineText, '".\^$*[]') . '$"'
+    endif
+  endfor
+endfunction
+
+command! -range=% HighlightRepeats <line1>,<line2>call HighlightRepeats()
